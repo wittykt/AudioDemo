@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="d32-f4-Vku">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Web-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="WebViewCtr" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EfW-1H-gSA">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="t1Q-k7-Zbb"/>
+                                </constraints>
+                                <offsetWrapper key="searchTextPositionAdjustment" horizontal="3" vertical="0.0"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                            </searchBar>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u9n-qX-ltc">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="ejG-65-1Z0">
+                                <rect key="frame" x="142" y="265" width="37" height="37"/>
+                                <color key="color" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EfW-1H-gSA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="48R-cf-Sl3"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="u9n-qX-ltc" secondAttribute="bottom" id="7gS-qc-lVE"/>
+                            <constraint firstAttribute="trailing" secondItem="EfW-1H-gSA" secondAttribute="trailing" id="8Db-Fu-ohn"/>
+                            <constraint firstItem="u9n-qX-ltc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="EW9-pd-x7S"/>
+                            <constraint firstItem="EfW-1H-gSA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="HoA-aW-kfx"/>
+                            <constraint firstItem="u9n-qX-ltc" firstAttribute="top" secondItem="EfW-1H-gSA" secondAttribute="bottom" id="Kre-Gy-SoB"/>
+                            <constraint firstAttribute="trailing" secondItem="u9n-qX-ltc" secondAttribute="trailing" id="O4y-E1-XUF"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Web" image="grid-world" id="OaP-n2-yPb"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="SerachBar" destination="EfW-1H-gSA" id="1nb-jD-npw"/>
+                        <outlet property="indicatorWeb" destination="ejG-65-1Z0" id="tG0-cD-lOg"/>
+                        <outlet property="webView" destination="u9n-qX-ltc" id="fql-ej-dat"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1096" y="355"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="EFf-3F-k9m">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="d32-f4-Vku" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Xl4-VF-ity">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="avd-wr-lU7"/>
+                        <segue destination="z3s-B0-CJr" kind="relationship" relationship="viewControllers" id="pQc-I5-dWw"/>
+                        <segue destination="ShE-EN-ddF" kind="relationship" relationship="viewControllers" id="SM7-4E-ImN"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XdY-pB-1EP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="424" y="355"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="shj-ms-Rm0">
+            <objects>
+                <viewController id="DUb-4t-eSy" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OB0-P9-cmt"/>
+                        <viewControllerLayoutGuide type="bottom" id="VY6-iM-h2x"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Xyv-kX-4nY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="SPg-6V-iL2"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yLl-a8-UNk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="956" y="1099"/>
+        </scene>
+        <!--Folder Download-->
+        <scene sceneID="6kq-0R-tfN">
+            <objects>
+                <viewController id="ndK-Uo-fHg" customClass="FolderDownload" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="N6K-P0-uwI"/>
+                        <viewControllerLayoutGuide type="bottom" id="Eb9-Pw-73F"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="I1W-Cn-FGR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QaK-4P-TkI">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="4HK-fP-BZn" customClass="DownloadCell">
+                                        <rect key="frame" x="0.0" y="92" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4HK-fP-BZn" id="QvJ-yC-cu6">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y2E-zf-yXc">
+                                                    <rect key="frame" x="8" y="0.0" width="40" height="35"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x3q-0d-ar3">
+                                                    <rect key="frame" x="48" y="0.0" width="204" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qPW-0M-CBJ">
+                                                    <rect key="frame" x="48" y="14" width="204" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SeR-ab-zOa">
+                                                    <rect key="frame" x="0.0" y="41" width="320" height="2"/>
+                                                </progressView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imgCustom" destination="Y2E-zf-yXc" id="scu-6V-g7V"/>
+                                            <outlet property="lblDownloadRemainingSize" destination="qPW-0M-CBJ" id="k0o-kj-phr"/>
+                                            <outlet property="lblName" destination="x3q-0d-ar3" id="Qdz-an-6mQ"/>
+                                            <outlet property="progressBarView" destination="SeR-ab-zOa" id="ZLK-w3-X7R"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ndK-Uo-fHg" id="T2k-xe-bw6"/>
+                                    <outlet property="delegate" destination="ndK-Uo-fHg" id="OPQ-OO-IOD"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8hk-z4-klI"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="tblView" destination="QaK-4P-TkI" id="kXD-Fz-OZQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Duf-Lv-wPg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2198" y="1099"/>
+        </scene>
+        <!--Downloads-->
+        <scene sceneID="u9a-gw-2Mo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ShE-EN-ddF" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Downloads" image="folderDownload" id="wXN-lp-gSP"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CxY-4E-3v6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ndK-Uo-fHg" kind="relationship" relationship="rootViewController" id="CGg-mh-PFH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ews-or-cv2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1666" y="1099"/>
+        </scene>
+        <!--Folder-->
+        <scene sceneID="1RB-16-aL1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="z3s-B0-CJr" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Folder" image="folder" id="v5F-PM-aMi"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yEp-hb-M5m">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="DUb-4t-eSy" kind="relationship" relationship="rootViewController" id="OZP-7q-rOi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g7z-Io-RzC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="424" y="1099"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="folder" width="128" height="128"/>
+        <image name="folderDownload" width="128" height="128"/>
+        <image name="grid-world" width="128" height="128"/>
+    </resources>
+</document>
